@@ -1,0 +1,14 @@
+apiVersion: v1beta3
+kind: Service
+metadata:
+  name: kube-hello
+  labels:
+    name: kube-hello
+spec:
+  ports:
+  - port: 80
+    targetPort: 80
+  publicIPs:
+  - 10.22.42.33
+  selector:
+    name: kube-hello
